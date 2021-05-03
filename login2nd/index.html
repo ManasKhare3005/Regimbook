@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>REGIMBOOK</title>
+    <link href="../eStartup/WhatsApp Image 2021-04-08 at 1.30.11 PM.jpeg" rel="icon">
+	<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body style="background-image: url('https://vistapointe.net/images/rashtrapati-bhavan-9.jpg');">
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<a href="index.html"><img src="../eStartup/eStartup/WhatsApp Image 2021-04-08 at 1.29.12 PM.jpeg" alt="" title="" width="400" height="100"/></a>
+					<h5 style="color: black;">Get all your government updates here...</h5>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-12 col-lg-10">
+					<div class="wrap d-md-flex">
+						<div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
+							<div class="text w-100">
+								<h2>Welcome to Regimbook</h2>
+								<p>Don't have an account?</p>
+								<a href="SignUP.html" onclick="RegisterUser()" class="btn btn-white btn-outline-white">Sign Up</a>
+							</div>
+			      </div>
+						<div class="login-wrap p-4 p-lg-5">
+			      	<div class="d-flex">
+			      		<div class="w-100">
+			      			<h3 class="mb-4" style="color: white;">Sign In</h3>
+			      		</div>
+								<div class="w-100">
+
+								</div>
+			      	</div>
+							<form action="#" class="signin-form">
+			      		<div class="form-group mb-3">
+			      			<label class="label" for="name">Email ID:</label>
+			      			<input type="text" class="form-control" placeholder="Email ID:" id="email" required>
+			      		</div>
+		            <div class="form-group mb-3">
+		            	<label class="label" for="password">Password</label>
+		              <input type="password" class="form-control" placeholder="Password" id="password"required>
+		            </div>
+		            <div class="form-group">
+		            	<a onclick="LoginUser()" type="submit" class="form-control btn btn-primary submit px-3"><b>Sign In</b></a>
+		            </div>
+		            <div class="form-group d-md-flex">
+		            	<div class="w-50 text-left">
+			            	<label class="checkbox-wrap checkbox-primary mb-0">Remember Me
+									  <input type="checkbox" checked>
+									  <span class="checkmark"></span>
+										</label>
+									</div>
+									<div class="w-50 text-md-right">
+										<a href="../Profile/reset.html">Forgot Password?</a>
+									</div>
+		            </div>
+		          </form>
+		        </div>
+		      </div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
+
+
+  <script>
+	var firebaseConfig = {
+    apiKey: "AIzaSyA07aK63GPz7-_Koi01qQimnRCOD-M5Vzw",
+    authDomain: "regimbook-35d1e.firebaseapp.com",
+    projectId: "regimbook-35d1e",
+    storageBucket: "regimbook-35d1e.appspot.com",
+    messagingSenderId: "832304832706",
+    appId: "1:832304832706:web:86d8a55e5f379fb04a9b5b"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+  
+
+	function LoginUser(){
+	 var email=document.getElementById('email').value;
+	 var password=document.getElementById('password').value;
+	 firebase.auth().signInWithEmailAndPassword(email,password).then(function(){
+  
+	  var id=firebase.auth().currentUser.uid;
+	  window.location.replace("../eStartup/eStartup/index.html");
+	  localStorage.setItem('id',id);
+	  
+	 }).catch(function(error){
+  
+	  var errorCode=error.code;
+	  var errorMsg=error.message;
+	  window.alert("Error : " +errorMsg)
+  
+	 });
+	}
+	const resetPasswordFunction = () => {
+    const email = mailField.value;
+    
+    if(!email)
+    {
+        window.alert("Please enter a registered email");
+    }
+    else
+    {
+        
+        auth.sendPasswordResetEmail(email).then(() => {
+    
+        window.alert('Password Reset Email Sent Successfully!');
+    
+    }).catch(function(error){
+      
+        window.alert("Please enter a registered email");
+    });
+    }
+    }
+</script>
+	</body>
+</html>
+
