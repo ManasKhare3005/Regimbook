@@ -636,6 +636,10 @@ section {
 }
 
 /* Blog Section*/
+#my-news{
+  display:flex;
+  flex-wrap: wrap;
+}
 @media (max-width: 991px) {
   #blog .block-blog {
     margin-bottom: 30px;

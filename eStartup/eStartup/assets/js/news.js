@@ -12,7 +12,7 @@ const settings = {
 $.ajax(settings).done(function (response) {
   console.log(response.articles);
   for(let i=7;i<10;i++) {
-             $('#my-news').append(`<div class="col-4">
+             $('#my-news').append(`<div class="col-md-6 col-lg-4">
              <div class="card">
                <img src="${response.articles[i].media}" class="card-img-top" alt="...">
                <div class="card-body">
@@ -24,3 +24,7 @@ $.ajax(settings).done(function (response) {
          </div>  `)
           }
 });
+
+// git add .
+// git commit -m ""
+// git push origin main
