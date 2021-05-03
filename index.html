@@ -2,15 +2,15 @@
 <html lang="en">
   <head>
   	<title>REGIMBOOK</title>
-    <link href="../eStartup/WhatsApp Image 2021-04-08 at 1.30.11 PM.jpeg" rel="icon">
-	<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="./eStartup/WhatsApp Image 2021-04-08 at 1.30.11 PM.jpeg" rel="icon">
+	<link href="./eStartup/eStartup/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="./login2nd/css/style.css">
 
 	</head>
 	<body style="background-image: url('https://vistapointe.net/images/rashtrapati-bhavan-9.jpg');">
@@ -18,7 +18,7 @@
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-5">
-					<a href="index.html"><img src="../eStartup/eStartup/WhatsApp Image 2021-04-08 at 1.29.12 PM.jpeg" alt="" title="" width="400" height="100"/></a>
+					<a href="./index.html"><img src="./eStartup/eStartup/WhatsApp Image 2021-04-08 at 1.29.12 PM.jpeg" alt="" title="" width="400" height="100"/></a>
 					<h5 style="color: black;">Get all your government updates here...</h5>
 				</div>
 			</div>
@@ -29,7 +29,7 @@
 							<div class="text w-100">
 								<h2>Welcome to Regimbook</h2>
 								<p>Don't have an account?</p>
-								<a href="SignUP.html" onclick="RegisterUser()" class="btn btn-white btn-outline-white">Sign Up</a>
+								<a href="./login2nd/SignUP.html" onclick="RegisterUser()" class="btn btn-white btn-outline-white">Sign Up</a>
 							</div>
 			      </div>
 						<div class="login-wrap p-4 p-lg-5">
@@ -61,7 +61,7 @@
 										</label>
 									</div>
 									<div class="w-50 text-md-right">
-										<a href="../Profile/reset.html">Forgot Password?</a>
+										<a href="./Profile/reset.html">Forgot Password?</a>
 									</div>
 		            </div>
 		          </form>
@@ -72,10 +72,10 @@
 		</div>
 	</section>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="./login2nd/js/jquery.min.js"></script>
+  <script src="./login2nd/js/popper.js"></script>
+  <script src="./login2nd/js/bootstrap.min.js"></script>
+  <script src="./login2nd/js/main.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
 
@@ -100,7 +100,7 @@
 	 firebase.auth().signInWithEmailAndPassword(email,password).then(function(){
   
 	  var id=firebase.auth().currentUser.uid;
-	  window.location.replace("../eStartup/eStartup/index.html");
+	  window.location.replace("./eStartup/eStartup/index.html");
 	  localStorage.setItem('id',id);
 	  
 	 }).catch(function(error){
