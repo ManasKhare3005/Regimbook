@@ -18,7 +18,7 @@ $.ajax(settings).done(function (response) {
                <div class="card-body">
                  <h5 class="card-title">${response.articles[i].title}</h5>
                  <p class="card-text">${response.articles[i].summary}</p>
-                 <a href="${response.articles[i].link}"  style="background-color: orangered;" class="btn btn-primary btn-block">Read Full News</a>
+                 <a href="${response.articles[i].link}"  style="background-color: orangered;" class="btn btn-primary btn-block" target="_blank">Read Full News</a>
              </div>
            </div>
          </div>  `)

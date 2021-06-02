@@ -20,7 +20,7 @@ const settings = {
              <div class="col-md-5">
                <h3>${response.articles[i].title}</h3>
                <p>${response.articles[i].summary}</p>
-               <a class="btn btn-primary"  style="background-color: orangered;" href="${response.articles[i].link}">Read Full News
+               <a class="btn btn-primary"  style="background-color: orangered;" href="${response.articles[i].link}" target="_blank">Read Full News
                  <span class="glyphicon glyphicon-chevron-right"></span>
                </a>
              </div>
