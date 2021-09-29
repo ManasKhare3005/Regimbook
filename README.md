@@ -40,7 +40,7 @@ Abhijeet Gupta
 <img src = "https://regimbook.netlify.app/estartup/eStartup/16df5ade-f9dc-446c-987f-1d5c05d91e4a.jpe"  height="160" alt="Your Name Here (Insert Your Image Link In Src">
 </p>
 <p align="center">
-<a href = "https://github.com/fs765"><img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36"/></a>
+<a href = "https://github.com/abhigupta2000"><img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36"/></a>
 </p>
 </td>
 
